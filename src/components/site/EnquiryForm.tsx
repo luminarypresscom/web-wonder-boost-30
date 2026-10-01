@@ -40,7 +40,16 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
     }
     setErrors({});
     setStatus("sending");
-    const { error } = await supabase.from("enquiries").insert({ kind, ...parsed.data });
+    const d = parsed.data;
+    const { error } = await supabase.from("enquiries").insert({
+      kind,
+      name: d.name,
+      email: d.email,
+      book_title: d.book_title ?? null,
+      book_link: d.book_link ?? null,
+      plan: d.plan ?? null,
+      message: d.message ?? null,
+    });
     setStatus(error ? "error" : "done");
   }
 
