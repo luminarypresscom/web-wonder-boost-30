@@ -51,7 +51,7 @@ export const plans = [
     blurb: "End-to-end brand building for established authors.",
     lead: "Everything in Growth, plus:",
     features: [
-      "Custom author sales website — your own storefront for direct book sales",
+      "Custom author sales website, your own storefront for direct book sales",
       "Built-in order processing and digital delivery",
       "Sales dashboard with revenue, traffic and conversion tracking",
       "Built-in email marketing tools",
@@ -91,15 +91,15 @@ export const covers = [
   { src: sky, title: "When the Sky Forgets", kind: "Cover" },
   { src: circuit, title: "Circuit of Lies", kind: "Cover" },
   { src: orchard, title: "The Orchard House Murders", kind: "Cover" },
-  { src: silenceVariant, title: "Silence — Variant", kind: "Cover" },
-  { src: silence3d, title: "Silence — 3D Mockup", kind: "Mockup" },
-  { src: silenceDesk, title: "Silence — Desk Mockup", kind: "Mockup" },
+  { src: silenceVariant, title: "Silence: Variant", kind: "Cover" },
+  { src: silence3d, title: "Silence: 3D Mockup", kind: "Mockup" },
+  { src: silenceDesk, title: "Silence: Desk Mockup", kind: "Mockup" },
 ];
 
 export const faqs = [
   {
     q: "Do you work with self-published authors?",
-    a: "Yes — we work with self-published, hybrid, and traditionally published authors alike.",
+    a: "Yes. We work with self-published, hybrid, and traditionally published authors alike.",
   },
   {
     q: "What genres do you work with?",
@@ -115,16 +115,16 @@ export const faqs = [
   },
   {
     q: "Do you design book covers too?",
-    a: "Yes — cover design is part of our creative work. You can see examples in our portfolio.",
+    a: "Yes. Cover design is part of our creative work. You can see examples in our portfolio.",
   },
   {
     q: "Is the Growth Blueprint really free?",
-    a: "Yes. No cost and no obligation — it's a genuine look at where your book stands and what to do next.",
+    a: "Yes. There is no cost and no obligation. It is a genuine look at where your book stands and what to do next.",
   },
 ];
 
 export const blueprintItems = [
-  ["What's already working", "A clear read on your book's real strengths — author credibility, reviews, category fit."],
+  ["What's already working", "A clear read on your book's real strengths: author credibility, reviews, and category fit."],
   ["Current challenges", "An honest look at what's limiting discovery right now: pricing, positioning, or simply being unseen."],
   ["Your ideal reader profile", "Who your book is actually for, and who it could reach with the right positioning."],
   ["Biggest opportunity", "The single highest-leverage move available for your book right now. No generic checklist."],
