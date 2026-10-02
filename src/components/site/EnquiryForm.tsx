@@ -2,8 +2,9 @@ import { useState } from "react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { CONTACT_EMAIL, plans } from "@/lib/site-data";
+import { Button } from "@/components/ui/button";
 
-type Kind = "blueprint" | "contact" | "quote";
+type Kind = "blueprint" | "contact" | "quote" | "manuscript";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
@@ -15,7 +16,7 @@ const schema = z.object({
 });
 
 const field =
-  "w-full rounded-md border border-input bg-ink-deep px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-ring/40";
+  "w-full rounded-sm border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20";
 
 export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: string | undefined }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -57,10 +58,12 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
     return (
       <div className="rounded-xl border border-border bg-card p-8 text-center">
         <p className="eyebrow">Received</p>
-        <h3 className="mt-3 text-2xl text-foreground">Thank you — we've got it.</h3>
+        <h3 className="mt-3 text-2xl text-foreground">Thank you, we've got it.</h3>
         <p className="mt-3 text-muted-foreground">
           {kind === "blueprint"
             ? "We'll prepare your Book Growth Blueprint and email it to you, usually within a few days."
+            : kind === "manuscript"
+              ? "We'll review your publishing enquiry and reply with the right next step."
             : "We typically reply within one working day."}
         </p>
       </div>
@@ -86,7 +89,7 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
       </div>
       <label className="block text-sm">
         <span className="mb-1.5 block font-semibold">
-          Book title {kind === "contact" && <span className="text-muted-foreground">(optional)</span>}
+           {kind === "manuscript" ? "Working title" : "Book title"} {kind === "contact" && <span className="text-muted-foreground">(optional)</span>}
         </span>
         <input name="book_title" className={field} />
       </label>
@@ -104,7 +107,7 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
           <select name="plan" defaultValue={defaultPlan ?? "growth"} className={field}>
             {plans.map((p) => (
               <option key={p.id} value={p.id}>
-                {p.name} — {p.price}
+                {p.name}: {p.price}
               </option>
             ))}
             <option value="custom">Something custom</option>
@@ -113,25 +116,27 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
       )}
       <label className="block text-sm">
         <span className="mb-1.5 block font-semibold">
-          {kind === "blueprint" ? "Biggest challenge right now" : "Message"}
+           {kind === "blueprint" ? "Biggest challenge right now" : kind === "manuscript" ? "Tell us about your manuscript" : "Message"}
           {kind !== "contact" && <span className="text-muted-foreground"> (optional)</span>}
         </span>
         <textarea name="message" rows={4} className={field} />
         {err("message")}
       </label>
-      <button
+      <Button
         type="submit"
         disabled={status === "sending"}
-        className="shadow-offset w-full rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition hover:translate-x-0.5 hover:translate-y-0.5 disabled:opacity-60 sm:w-auto"
+        className="shadow-offset h-auto w-full rounded-sm px-6 py-3.5 text-sm font-bold transition hover:translate-x-0.5 hover:translate-y-0.5 disabled:opacity-60 sm:w-auto"
       >
         {status === "sending"
           ? "Sending…"
           : kind === "blueprint"
             ? "Get my free Blueprint"
-            : kind === "quote"
+            : kind === "manuscript"
+              ? "Submit for review"
+              : kind === "quote"
               ? "Request a quote"
               : "Send message"}
-      </button>
+      </Button>
       {status === "error" && (
         <p className="text-sm text-destructive">
           Something went wrong. Please try again or email us at {CONTACT_EMAIL}.

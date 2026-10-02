@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep hybrid publishing enquiries in the existing enquiries flow, because one intake path keeps the author experience and operations coherent.
