@@ -22,7 +22,7 @@ function Contact() {
   return (
     <>
       <PageIntro eyebrow="Get in touch" title="Let's talk about your book.">
-        Send a message or request a quote — it comes straight to our inbox. Prefer email? Write to{" "}
+        Send a message or request a quote. It comes straight to our inbox. Prefer email? Write to{" "}
         <a href={`mailto:${CONTACT_EMAIL}`} className="break-all text-accent hover:underline">{CONTACT_EMAIL}</a>.
       </PageIntro>
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2">

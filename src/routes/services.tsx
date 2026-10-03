@@ -27,7 +27,7 @@ const services = [
     img: social,
     n: "02",
     t: "Social Media Marketing",
-    d: "Platform-native content that builds genuine, lasting readership. We manage your presence across Instagram, TikTok, X and LinkedIn — turning followers into loyal readers and word-of-mouth advocates.",
+    d: "Platform-native content that builds genuine, lasting readership. We manage your presence across Instagram, TikTok, X and LinkedIn, turning followers into loyal readers and word-of-mouth advocates.",
     tags: ["Content strategy", "Community growth", "BookTok", "Bookstagram"],
   },
 ];
@@ -35,21 +35,21 @@ const services = [
 const steps = [
   ["Consult", "A deep-dive discovery session: your book, audience, goals and timeline. No templates, no recycled plans."],
   ["Strategize", "We map platforms, timing, messaging, partnerships and press. The plan is approved before a single post goes live."],
-  ["Launch", "Full transparency: weekly check-ins, live reporting and continuous optimization. You write — we handle the rest."],
+  ["Launch", "Full transparency: weekly check-ins, live reporting and continuous optimization. You write, we handle the rest."],
 ];
 
 function Services() {
   return (
     <>
       <PageIntro eyebrow="What we do" title="Marketing built only for authors.">
-        We work exclusively with authors and publishers. Every account, asset and piece of content stays yours — you never share royalties or rights with us.
+        We work exclusively with authors and publishers. Every account, asset and piece of content stays yours. You never share royalties or rights with us.
       </PageIntro>
       <section className="mx-auto max-w-6xl space-y-16 px-5 py-20">
         {services.map((s, i) => (
           <article key={s.t} className={`grid items-center gap-10 md:grid-cols-2 ${i % 2 ? "md:[&>img]:order-2" : ""}`}>
             <img src={s.img} alt={s.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover shadow-offset" />
             <div>
-              <p className="eyebrow">{s.n} — Service</p>
+              <p className="eyebrow">{s.n} / Service</p>
               <h2 className="mt-3 text-4xl text-foreground">{s.t}</h2>
               <p className="mt-4 text-muted-foreground">{s.d}</p>
               <ul className="mt-6 flex flex-wrap gap-2">

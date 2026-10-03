@@ -8,9 +8,9 @@ import { BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Luminary Press — Your Book Deserves to Be Seen" },
+      { title: "Luminary Press | Your Book Deserves to Be Seen" },
       { name: "description", content: "Book marketing and author promotion that grows real readership. Start with a free Book Growth Blueprint for your book." },
-      { property: "og:title", content: "Luminary Press — Your Book Deserves to Be Seen" },
+      { property: "og:title", content: "Luminary Press | Your Book Deserves to Be Seen" },
       { property: "og:description", content: "Book marketing and author promotion. Get a free Book Growth Blueprint and 30-day plan." },
     ],
   }),
@@ -29,7 +29,7 @@ function Home() {
             Your book deserves <em className="text-accent">to be seen.</em>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Strategic social media marketing and promotion that turns great books into real readership — and authors into names readers remember.
+            Strategic social media marketing and promotion that turns great books into real readership, and authors into names readers remember.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link to="/blueprint" className="shadow-offset rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground">
@@ -71,7 +71,7 @@ function Home() {
           <h2 className="mt-3 text-4xl text-foreground">Services built for authors</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { img: promo, t: "Author Promotion", d: "Brand identity, press outreach, media placements and interview coaching — so readers know the mind behind the book." },
+              { img: promo, t: "Author Promotion", d: "Brand identity, press outreach, media placements and interview coaching, so readers know the mind behind the book." },
               { img: social, t: "Social Media Marketing", d: "Platform-native content for BookTok, Bookstagram, X and LinkedIn that turns followers into loyal readers." },
             ].map((s) => (
               <Link key={s.t} to="/services" className="group overflow-hidden rounded-xl border border-border bg-card">
