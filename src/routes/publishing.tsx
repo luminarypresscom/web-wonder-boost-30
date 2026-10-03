@@ -30,7 +30,7 @@ const stages = [
 
 const principles = [
   "Every manuscript is reviewed before a publishing proposal is offered.",
-  "Scope, costs, rights, royalties and responsibilities are agreed in writing.",
+  "Scope, costs, deliverables and responsibilities are agreed in writing.",
   "Editorial and design decisions protect the author's voice and the reader's experience.",
   "Publishing and marketing are planned together, not treated as separate afterthoughts.",
 ];

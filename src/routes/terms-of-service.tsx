@@ -4,9 +4,11 @@ import { CONTACT_EMAIL } from "@/lib/site-data";
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Luminary Press" },
+      { title: "Terms of Service | Luminary Press" },
       { name: "description", content: "Terms for using the Luminary Press website and booking our services." },
-      { property: "og:title", content: "Terms of Service — Luminary Press" },
+      { property: "og:title", content: "Terms of Service | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "The terms that apply to our website and services." },
     ],
   }),

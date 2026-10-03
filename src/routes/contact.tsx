@@ -8,10 +8,12 @@ export const Route = createFileRoute("/contact")({
   validateSearch: z.object({ plan: z.string().optional() }),
   head: () => ({
     meta: [
-      { title: "Contact & FAQ — Luminary Press" },
+      { title: "Contact & FAQ | Luminary Press" },
       { name: "description", content: "Ask a question or request a quote for your book marketing campaign. Answers to common questions included." },
       { property: "og:title", content: "Contact Luminary Press" },
       { property: "og:description", content: "Request a quote or ask us anything about marketing your book." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,

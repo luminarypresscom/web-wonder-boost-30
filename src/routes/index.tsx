@@ -12,6 +12,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Book marketing and author promotion that grows real readership. Start with a free Book Growth Blueprint for your book." },
       { property: "og:title", content: "Luminary Press | Your Book Deserves to Be Seen" },
       { property: "og:description", content: "Book marketing and author promotion. Get a free Book Growth Blueprint and 30-day plan." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,

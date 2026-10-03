@@ -6,9 +6,11 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Cover Design Portfolio — Luminary Press" },
+      { title: "Cover Design Portfolio | Luminary Press" },
       { name: "description", content: "Book cover designs and mockups by Luminary Press across thrillers, romance, fantasy and more." },
-      { property: "og:title", content: "Cover Design Portfolio — Luminary Press" },
+      { property: "og:title", content: "Cover Design Portfolio | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Covers designed to stop the scroll and sell the story." },
     ],
   }),

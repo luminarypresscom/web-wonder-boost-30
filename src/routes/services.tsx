@@ -6,9 +6,11 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Author Promotion & Social Media | Luminary Press" },
+      { title: "Services | Author Promotion & Social Media | Luminary Press" },
       { name: "description", content: "Author brand building, press outreach, BookTok and Bookstagram marketing, and a clear three-step campaign process." },
-      { property: "og:title", content: "Book Marketing Services — Luminary Press" },
+      { property: "og:title", content: "Book Marketing Services | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Author promotion and social media marketing built around your readers." },
     ],
   }),

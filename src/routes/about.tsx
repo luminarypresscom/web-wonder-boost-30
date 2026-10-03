@@ -6,10 +6,12 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Luminary Press — Team & Philosophy" },
+      { title: "About Luminary Press | Team & Philosophy" },
       { name: "description", content: "An author-first team of 9 specialists in strategy, content, outreach and design, founded by Samuel Eni." },
       { property: "og:title", content: "About Luminary Press" },
       { property: "og:description", content: "Precision, prestige and results. Meet the team behind every campaign." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
