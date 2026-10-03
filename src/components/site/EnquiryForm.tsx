@@ -16,7 +16,7 @@ const schema = z.object({
 });
 
 const field =
-  "w-full rounded-sm border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20";
+  "w-full rounded-md border border-input bg-ink-deep px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-ring/40";
 
 export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: string | undefined }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -125,7 +125,7 @@ export function EnquiryForm({ kind, defaultPlan }: { kind: Kind; defaultPlan?: s
       <Button
         type="submit"
         disabled={status === "sending"}
-        className="shadow-offset h-auto w-full rounded-sm px-6 py-3.5 text-sm font-bold transition hover:translate-x-0.5 hover:translate-y-0.5 disabled:opacity-60 sm:w-auto"
+        className="shadow-offset h-auto w-full rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition hover:translate-x-0.5 hover:translate-y-0.5 disabled:opacity-60 sm:w-auto"
       >
         {status === "sending"
           ? "Sending…"
