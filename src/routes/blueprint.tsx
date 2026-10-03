@@ -5,9 +5,11 @@ import { blueprintItems } from "@/lib/site-data";
 export const Route = createFileRoute("/blueprint")({
   head: () => ({
     meta: [
-      { title: "Free Book Growth Blueprint — Luminary Press" },
+      { title: "Free Book Growth Blueprint | Luminary Press" },
       { name: "description", content: "Request a free, no-obligation assessment of your book's discovery signals plus a 30-day growth plan." },
-      { property: "og:title", content: "Free Book Growth Blueprint — Luminary Press" },
+      { property: "og:title", content: "Free Book Growth Blueprint | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "A free assessment of your book and a practical 30-day growth plan." },
     ],
   }),

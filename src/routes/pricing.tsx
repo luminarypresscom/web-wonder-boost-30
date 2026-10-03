@@ -6,9 +6,11 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Book Marketing Packages | Luminary Press" },
+      { title: "Pricing | Book Marketing Packages | Luminary Press" },
       { name: "description", content: "Startup $350, Growth $1,750, Signature $3,400. Clear book marketing packages so you know what's included." },
-      { property: "og:title", content: "Book Marketing Packages — Luminary Press" },
+      { property: "og:title", content: "Book Marketing Packages | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Startup, Growth and Signature plans for every stage of your author career." },
     ],
   }),

@@ -6,9 +6,11 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Cover Design Portfolio — Luminary Press" },
-      { name: "description", content: "Book cover designs and mockups by Luminary Press — thrillers, romance, fantasy and more." },
-      { property: "og:title", content: "Cover Design Portfolio — Luminary Press" },
+      { title: "Cover Design Portfolio | Luminary Press" },
+      { name: "description", content: "Book cover designs and mockups by Luminary Press across thrillers, romance, fantasy and more." },
+      { property: "og:title", content: "Cover Design Portfolio | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Covers designed to stop the scroll and sell the story." },
     ],
   }),
@@ -19,7 +21,7 @@ function Portfolio() {
   return (
     <>
       <PageIntro eyebrow="Our craft" title="Cover design portfolio.">
-        Every author's first impression — designed to stop the scroll and sell the story before a single page is turned.
+        Every author's first impression, designed to stop the scroll and sell the story before a single page is turned.
       </PageIntro>
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">

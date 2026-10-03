@@ -6,10 +6,12 @@ import { PageIntro, BlueprintBand } from "@/components/site/Layout";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Luminary Press — Team & Philosophy" },
+      { title: "About Luminary Press | Team & Philosophy" },
       { name: "description", content: "An author-first team of 9 specialists in strategy, content, outreach and design, founded by Samuel Eni." },
       { property: "og:title", content: "About Luminary Press" },
-      { property: "og:description", content: "Precision, prestige, results — meet the team behind every campaign." },
+      { property: "og:description", content: "Precision, prestige and results. Meet the team behind every campaign." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
@@ -17,7 +19,7 @@ export const Route = createFileRoute("/about")({
 
 const pillars = [
   ["Author-first philosophy", "We work exclusively with authors and publishers. Every strategy answers one question: what's best for this author's career?"],
-  ["Data-driven storytelling", "Audience research, platform analytics and publishing market intelligence — the precision of data with the power of narrative."],
+  ["Data-driven storytelling", "Audience research, platform analytics and publishing market intelligence: the precision of data with the power of narrative."],
   ["Long-term brand building", "We don't chase viral moments. We build audiences that show up for your next book just as passionately."],
 ];
 
@@ -42,13 +44,13 @@ function About() {
             <p className="eyebrow">Meet the team</p>
             <h2 className="mt-3 text-4xl text-foreground">Nine specialists behind every author.</h2>
             <p className="mt-4 text-muted-foreground">
-              Leadership brings years of hands-on marketing strategy experience, backed by specialists in content, outreach and design — so every campaign is handled with precision, accountability and genuine care for your career.
+              Leadership brings years of hands-on marketing strategy experience, backed by specialists in content, outreach and design, so every campaign is handled with precision, accountability and genuine care for your career.
             </p>
             <div className="mt-8 border-l-2 border-primary pl-4">
               <p className="font-serif text-xl text-foreground">Samuel Eni</p>
               <p className="text-sm text-accent">Founder & Executive Marketing Manager</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                Leads strategy across every campaign, translating each book's voice into a plan built to turn readers into lifelong fans — hands-on from first consultation to launch day.
+                Leads strategy across every campaign, translating each book's voice into a plan built to turn readers into lifelong fans, hands-on from first consultation to launch day.
               </p>
             </div>
           </div>

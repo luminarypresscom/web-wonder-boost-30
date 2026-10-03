@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL } from "@/lib/site-data";
 
@@ -16,11 +16,11 @@ const nav = [
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link to="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
-          <span className="font-serif text-xl font-black uppercase text-foreground">Luminary</span>
-          <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-primary">Press</span>
+          <span className="font-serif text-xl font-semibold tracking-wide text-foreground">Luminary</span>
+          <span className="eyebrow">Press</span>
         </Link>
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((n) => (
@@ -77,30 +77,30 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-paper/15 bg-ink-deep text-paper">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3 lg:px-8">
+    <footer className="border-t border-border bg-ink-deep">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl text-paper">Luminary Press</p>
-          <p className="mt-2 text-sm text-paper/60">Selective hybrid publishing and strategic book growth.</p>
+          <p className="font-serif text-2xl text-foreground">Luminary Press</p>
+          <p className="mt-2 text-sm text-muted-foreground">Hybrid publishing, book marketing & author promotion.</p>
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm">
           {nav.map((n) => (
-            <Link key={n.to} to={n.to} className="text-paper/60 hover:text-paper">
+            <Link key={n.to} to={n.to} className="text-muted-foreground hover:text-foreground">
               {n.label}
             </Link>
           ))}
-          <Link to="/blueprint" className="text-paper/60 hover:text-paper">Free Blueprint</Link>
+          <Link to="/blueprint" className="text-muted-foreground hover:text-foreground">Free Blueprint</Link>
         </div>
         <div className="text-sm">
           <p className="eyebrow">Get in touch</p>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block break-all text-paper hover:text-accent">
+          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block break-all text-foreground hover:text-accent">
             {CONTACT_EMAIL}
           </a>
-          <p className="mt-1 text-paper/60">Typically replies within a day</p>
+          <p className="mt-1 text-muted-foreground">Typically replies within a day</p>
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-wrap justify-between gap-3 px-5 py-5 text-xs text-paper/55 lg:px-8">
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 px-5 py-5 text-xs text-muted-foreground">
           <p>© 2026 Luminary Press. All rights reserved.</p>
           <p className="flex gap-4">
             <Link to="/privacy-policy" className="hover:text-foreground">Privacy Policy</Link>
@@ -114,10 +114,10 @@ export function Footer() {
 
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: React.ReactNode; children?: React.ReactNode }) {
   return (
-    <section className="border-b border-border bg-background paper-grain">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:py-24 lg:px-8">
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <p className="eyebrow">{eyebrow}</p>
-        <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[1.02] text-foreground md:text-7xl">{title}</h1>
+        <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] text-foreground md:text-6xl">{title}</h1>
         {children && <div className="mt-6 max-w-2xl text-lg text-muted-foreground">{children}</div>}
       </div>
     </section>
@@ -126,19 +126,19 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title
 
 export function BlueprintBand() {
   return (
-    <section className="bg-primary text-primary-foreground">
-      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 px-5 py-14 md:flex-row md:items-center lg:px-8">
+    <section className="bg-primary">
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-14 md:flex-row md:items-center">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground/75">Free / No obligation</p>
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary-foreground/80">Free · No obligation</p>
           <h2 className="mt-2 max-w-xl text-3xl text-primary-foreground md:text-4xl">
             See where your book stands before you spend a dollar.
           </h2>
         </div>
         <Link
           to="/blueprint"
-          className="inline-flex items-center gap-2 rounded-sm bg-ink-deep px-6 py-3.5 text-sm font-bold text-paper transition hover:opacity-90"
+          className="rounded-md bg-ink-deep px-6 py-3.5 text-sm font-bold text-foreground transition hover:opacity-90"
         >
-          Get my free Blueprint <ArrowRight size={16} />
+          Get my free Blueprint →
         </Link>
       </div>
     </section>

@@ -4,9 +4,11 @@ import { CONTACT_EMAIL } from "@/lib/site-data";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Luminary Press" },
+      { title: "Privacy Policy | Luminary Press" },
       { name: "description", content: "What Luminary Press collects through this website and how it is used." },
-      { property: "og:title", content: "Privacy Policy — Luminary Press" },
+      { property: "og:title", content: "Privacy Policy | Luminary Press" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "How Luminary Press handles your information." },
     ],
   }),

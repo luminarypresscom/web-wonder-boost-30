@@ -8,10 +8,12 @@ export const Route = createFileRoute("/contact")({
   validateSearch: z.object({ plan: z.string().optional() }),
   head: () => ({
     meta: [
-      { title: "Contact & FAQ — Luminary Press" },
+      { title: "Contact & FAQ | Luminary Press" },
       { name: "description", content: "Ask a question or request a quote for your book marketing campaign. Answers to common questions included." },
       { property: "og:title", content: "Contact Luminary Press" },
       { property: "og:description", content: "Request a quote or ask us anything about marketing your book." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,
@@ -22,7 +24,7 @@ function Contact() {
   return (
     <>
       <PageIntro eyebrow="Get in touch" title="Let's talk about your book.">
-        Send a message or request a quote — it comes straight to our inbox. Prefer email? Write to{" "}
+        Send a message or request a quote. It comes straight to our inbox. Prefer email? Write to{" "}
         <a href={`mailto:${CONTACT_EMAIL}`} className="break-all text-accent hover:underline">{CONTACT_EMAIL}</a>.
       </PageIntro>
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2">
