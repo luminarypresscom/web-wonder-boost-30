@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PublishingRouteImport } from './routes/publishing'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
 
@@ -54,6 +55,11 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PublishingRoute = PublishingRouteImport.update({
+  id: '/publishing',
+  path: '/publishing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/publishing': typeof PublishingRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/publishing': typeof PublishingRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/publishing': typeof PublishingRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/publishing'
     | '/services'
     | '/terms-of-service'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/publishing'
     | '/services'
     | '/terms-of-service'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/privacy-policy'
+    | '/publishing'
     | '/services'
     | '/terms-of-service'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  PublishingRoute: typeof PublishingRoute
   ServicesRoute: typeof ServicesRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/publishing': {
+      id: '/publishing'
+      path: '/publishing'
+      fullPath: '/publishing'
+      preLoaderRoute: typeof PublishingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  PublishingRoute: PublishingRoute,
   ServicesRoute: ServicesRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
 }
