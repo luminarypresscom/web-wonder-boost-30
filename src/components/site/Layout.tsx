@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL } from "@/lib/site-data";
 
 const nav = [
+  { to: "/", label: "Home" },
   { to: "/publishing", label: "Publishing" },
   { to: "/services", label: "Services" },
   { to: "/pricing", label: "Pricing" },
