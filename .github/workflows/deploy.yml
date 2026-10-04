@@ -34,13 +34,18 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Prepare website for GitHub Pages
+        run: |
+          mkdir -p dist
+          cp -r .output/public/. dist/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./ .output/public
+          path: ./dist
 
   deploy:
     environment:
