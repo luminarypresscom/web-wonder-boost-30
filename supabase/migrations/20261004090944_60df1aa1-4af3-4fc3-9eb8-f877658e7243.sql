@@ -1,0 +1,2 @@
+ALTER TABLE public.enquiries DROP CONSTRAINT enquiries_kind_check;
+ALTER TABLE public.enquiries ADD CONSTRAINT enquiries_kind_check CHECK (kind = ANY (ARRAY['blueprint'::text, 'contact'::text, 'quote'::text, 'manuscript'::text]));
