@@ -36,8 +36,15 @@ jobs:
 
       - name: Prepare website for GitHub Pages
         run: |
+          rm -rf dist
           mkdir -p dist
           cp -r .output/public/. dist/
+          if [ ! -f dist/index.html ]; then
+            echo "ERROR: index.html was not generated."
+            echo "Files in .output/public:"
+            find .output/public -maxdepth 2 -type f | sort
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
