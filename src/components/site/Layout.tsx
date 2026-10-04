@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL } from "@/lib/site-data";
 
@@ -97,7 +97,21 @@ export function Footer() {
           <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block break-all text-foreground hover:text-accent">
             {CONTACT_EMAIL}
           </a>
-          <p className="mt-1 text-muted-foreground">Typically replies within a day</p>
+          <a href="mailto:luminarypress.online@proton.me" className="mt-1 block break-all text-foreground hover:text-accent">
+            luminarypress.online@proton.me
+          </a>
+          <a href="mailto:sam.luminarypress.online@gmail.com" className="mt-1 block break-all text-foreground hover:text-accent">
+            sam.luminarypress.online@gmail.com
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61589893041779"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-2 text-foreground hover:text-accent"
+          >
+            <Facebook size={16} /> Facebook
+          </a>
+          <p className="mt-2 text-muted-foreground">Typically replies within a day</p>
         </div>
       </div>
       <div className="border-t border-border">
