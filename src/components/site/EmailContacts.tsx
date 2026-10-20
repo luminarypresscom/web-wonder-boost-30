@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { ALL_EMAILS } from "@/lib/site-data";
 
-export function EmailContacts({ subject, tone = "default" }: { subject?: string; tone?: "default" | "onPrimary" }) {
+export function EmailContacts({ subject, tone = "default" }: { subject?: string | undefined; tone?: "default" | "onPrimary" }) {
   const text = tone === "onPrimary" ? "text-primary-foreground" : "text-foreground";
   const href = (e: string) => `mailto:${e}${subject ? `?subject=${encodeURIComponent(subject)}` : ""}`;
   return (
