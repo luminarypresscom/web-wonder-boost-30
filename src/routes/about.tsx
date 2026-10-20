@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Luminary Press | Team & Philosophy" },
-      { name: "description", content: "An author-first team of 9 specialists in strategy, content, outreach and design, founded by Samuel Eni." },
+      { name: "description", content: "An author-first team of 9 specialists in strategy, content, outreach and design, founded by Sam Eni." },
       { property: "og:title", content: "About Luminary Press" },
       { property: "og:description", content: "Precision, prestige and results. Meet the team behind every campaign." },
       { property: "og:type", content: "website" },
@@ -39,7 +39,7 @@ function About() {
       </section>
       <section className="border-y border-border bg-ink-deep">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2">
-          <img src={lead} alt="Samuel Eni, Executive Marketing Manager" loading="lazy" className="aspect-[4/5] w-full max-w-md rounded-xl object-cover shadow-offset" />
+          <img src={lead} alt="Sam Eni, Executive Marketing Manager" loading="lazy" className="aspect-[4/5] w-full max-w-md rounded-xl object-cover shadow-offset" />
           <div>
             <p className="eyebrow">Meet the team</p>
             <h2 className="mt-3 text-4xl text-foreground">Nine specialists behind every author.</h2>
@@ -47,7 +47,7 @@ function About() {
               Leadership brings years of hands-on marketing strategy experience, backed by specialists in content, outreach and design, so every campaign is handled with precision, accountability and genuine care for your career.
             </p>
             <div className="mt-8 border-l-2 border-primary pl-4">
-              <p className="font-serif text-xl text-foreground">Samuel Eni</p>
+              <p className="font-serif text-xl text-foreground">Sam Eni</p>
               <p className="text-sm text-accent">Founder & Executive Marketing Manager</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Leads strategy across every campaign, translating each book's voice into a plan built to turn readers into lifelong fans, hands-on from first consultation to launch day.
