@@ -34,11 +34,15 @@ function Home() {
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Strategic social media marketing and promotion that turns great books into real readership, and authors into names readers remember.
           </p>
-          <div className="mt-9">
-            <p className="mb-3 text-sm font-bold text-foreground">Email us to request your free Book Growth Blueprint:</p>
-            <EmailContacts subject="Free Book Growth Blueprint request" />
+          <div className="mt-9 flex flex-wrap items-center gap-5">
+            <Link
+              to="/blueprint"
+              className="inline-block rounded-md bg-primary px-7 py-4 text-base font-bold text-primary-foreground transition hover:opacity-90"
+            >
+              Request your free Blueprint
+            </Link>
+            <span className="text-sm text-muted-foreground">Free · no obligation</span>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">Free · no obligation</p>
         </div>
       </section>
 
