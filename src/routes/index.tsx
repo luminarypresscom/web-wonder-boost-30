@@ -4,7 +4,6 @@ import promo from "@/assets/promo.jpg";
 import social from "@/assets/social.jpg";
 import { covers, testimonials, blueprintItems } from "@/lib/site-data";
 import { BlueprintBand } from "@/components/site/Layout";
-import { EmailContacts } from "@/components/site/EmailContacts";
 
 export const Route = createFileRoute("/")({
   head: () => ({
