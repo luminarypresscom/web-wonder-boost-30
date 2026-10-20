@@ -149,12 +149,10 @@ export function BlueprintBand() {
             See where your book stands before you spend a dollar.
           </h2>
         </div>
-        <Link
-          to="/blueprint"
-          className="rounded-md bg-ink-deep px-6 py-3.5 text-sm font-bold text-foreground transition hover:opacity-90"
-        >
-          Get my free Blueprint →
-        </Link>
+        <div>
+          <p className="mb-3 text-sm font-bold text-primary-foreground">Email us to request your free Blueprint:</p>
+          <EmailContacts subject="Free Book Growth Blueprint request" tone="onPrimary" />
+        </div>
       </div>
     </section>
   );

@@ -29,8 +29,9 @@ function Contact() {
       </PageIntro>
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2">
         <div className="h-fit rounded-xl border border-border bg-card p-6 md:p-8">
-          <h2 className="mb-6 text-2xl text-foreground">{plan ? "Request a quote" : "Send us a message"}</h2>
-          <EnquiryForm kind={plan ? "quote" : "contact"} defaultPlan={plan} />
+          <h2 className="mb-2 text-2xl text-foreground">{plan ? "Request a quote by email" : "Email us"}</h2>
+          <p className="mb-6 text-sm text-muted-foreground">Write to any of our addresses and we'll reply within a day.</p>
+          <EmailContacts subject={plan ? `Quote request: ${plan}` : undefined} />
         </div>
         <div>
           <p className="eyebrow">Questions</p>

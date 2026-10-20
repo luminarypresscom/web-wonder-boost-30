@@ -45,19 +45,15 @@ function Pricing() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/contact"
-              search={{ plan: p.id }}
-              className={`mt-8 rounded-md px-5 py-3 text-center text-sm font-bold ${p.popular ? "bg-primary text-primary-foreground" : "border border-input text-foreground hover:bg-secondary"}`}
-            >
-              Get a quote
-            </Link>
+            <div className="mt-8 border-t border-border pt-5">
+              <p className="mb-3 text-sm font-bold text-accent">Send an email to request your quote:</p>
+              <EmailContacts subject={`Quote request: ${p.name}`} />
+            </div>
           </article>
         ))}
       </section>
       <p className="mx-auto -mt-8 max-w-6xl px-5 pb-20 text-center text-muted-foreground">
-        Need something more tailored?{" "}
-        <Link to="/contact" className="font-bold text-accent hover:underline">Tell us about your launch</Link> and we'll build a custom plan.
+        Need something more tailored? Email us about your launch and we'll build a custom plan.
       </p>
       <BlueprintBand />
     </>

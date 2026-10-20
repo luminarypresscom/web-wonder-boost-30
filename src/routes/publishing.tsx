@@ -49,13 +49,9 @@ function Publishing() {
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             A complete, carefully directed publishing journey for authors whose work and ambitions align with ours.
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a href="#submit" className="shadow-offset rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground">
-              Submit for review
-            </a>
-            <Link to="/blueprint" className="rounded-md border border-input px-6 py-3.5 text-sm font-bold text-foreground hover:bg-secondary">
-              Get the free Blueprint
-            </Link>
+          <div className="mt-9">
+            <p className="mb-3 text-sm font-bold text-foreground">Email us to submit your manuscript for review:</p>
+            <EmailContacts subject="Manuscript review enquiry" />
           </div>
         </div>
       </section>
@@ -113,7 +109,8 @@ function Publishing() {
             </p>
           </div>
           <div className="rounded-xl border border-border bg-background p-6 md:p-8">
-            <EnquiryForm kind="manuscript" />
+            <p className="mb-4 text-sm text-muted-foreground">Send your enquiry, working title and a short description to any of these addresses:</p>
+            <EmailContacts subject="Manuscript review enquiry" />
           </div>
         </div>
       </section>
