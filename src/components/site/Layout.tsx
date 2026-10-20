@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { EmailContacts } from "@/components/site/EmailContacts";
 import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";

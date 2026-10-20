@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
-import { EnquiryForm } from "@/components/site/EnquiryForm";
+import { EmailContacts } from "@/components/site/EmailContacts";
 import { PageIntro } from "@/components/site/Layout";
 import { CONTACT_EMAIL, faqs } from "@/lib/site-data";
 

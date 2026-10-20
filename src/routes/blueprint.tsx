@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { EnquiryForm } from "@/components/site/EnquiryForm";
+import { EmailContacts } from "@/components/site/EmailContacts";
 import { blueprintItems } from "@/lib/site-data";
 
 export const Route = createFileRoute("/blueprint")({

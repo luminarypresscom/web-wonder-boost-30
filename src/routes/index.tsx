@@ -4,6 +4,7 @@ import promo from "@/assets/promo.jpg";
 import social from "@/assets/social.jpg";
 import { covers, testimonials, blueprintItems } from "@/lib/site-data";
 import { BlueprintBand } from "@/components/site/Layout";
+import { EmailContacts } from "@/components/site/EmailContacts";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,15 +34,11 @@ function Home() {
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Strategic social media marketing and promotion that turns great books into real readership, and authors into names readers remember.
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <Link to="/blueprint" className="shadow-offset rounded-md bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground">
-              Get a free Book Growth Blueprint
-            </Link>
-            <Link to="/pricing" className="rounded-md border border-input px-6 py-3.5 text-sm font-bold text-foreground hover:bg-secondary">
-              See packages
-            </Link>
+          <div className="mt-9">
+            <p className="mb-3 text-sm font-bold text-foreground">Email us to request your free Book Growth Blueprint:</p>
+            <EmailContacts subject="Free Book Growth Blueprint request" />
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">Free · takes 2 minutes · no obligation</p>
+          <p className="mt-4 text-sm text-muted-foreground">Free · no obligation</p>
         </div>
       </section>
 

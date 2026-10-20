@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import library from "@/assets/library.jpg";
 import mockups from "@/assets/mockups.jpg";
-import { EnquiryForm } from "@/components/site/EnquiryForm";
+import { EmailContacts } from "@/components/site/EmailContacts";
 import { BlueprintBand } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/publishing")({
