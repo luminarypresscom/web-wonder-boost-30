@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { EnquiryForm } from "@/components/site/EnquiryForm";
+import { EmailContacts } from "@/components/site/EmailContacts";
 import { blueprintItems } from "@/lib/site-data";
 
 export const Route = createFileRoute("/blueprint")({
@@ -35,9 +35,9 @@ function Blueprint() {
         </ul>
       </div>
       <div className="h-fit rounded-xl border border-border bg-card p-6 md:sticky md:top-24 md:p-8">
-        <h2 className="text-2xl text-foreground">Tell us about your book</h2>
-        <p className="mb-6 mt-1 text-sm text-muted-foreground">Takes about 2 minutes.</p>
-        <EnquiryForm kind="blueprint" />
+        <h2 className="text-2xl text-foreground">Email us to request your Blueprint</h2>
+        <p className="mb-6 mt-1 text-sm text-muted-foreground">Include your name, book title and its Amazon or Goodreads link.</p>
+        <EmailContacts subject="Free Book Growth Blueprint request" />
       </div>
     </section>
   );

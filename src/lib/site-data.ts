@@ -8,6 +8,7 @@ import silence3d from "@/assets/mock-silence-3d.jpg";
 import silenceDesk from "@/assets/mock-silence-desk.jpg";
 
 export const CONTACT_EMAIL = "contact.luminarypress.online@gmail.com";
+export const ALL_EMAILS = [CONTACT_EMAIL, "luminarypress.online@proton.me", "sam.luminarypress.online@gmail.com"];
 
 export const plans = [
   {
