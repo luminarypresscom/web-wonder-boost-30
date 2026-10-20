@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { EmailContacts } from "@/components/site/EmailContacts";
 import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -150,10 +149,12 @@ export function BlueprintBand() {
             See where your book stands before you spend a dollar.
           </h2>
         </div>
-        <div>
-          <p className="mb-3 text-sm font-bold text-primary-foreground">Email us to request your free Blueprint:</p>
-          <EmailContacts subject="Free Book Growth Blueprint request" tone="onPrimary" />
-        </div>
+        <Link
+          to="/blueprint"
+          className="inline-block shrink-0 rounded-md bg-primary-foreground px-7 py-4 text-base font-bold text-primary transition hover:opacity-90"
+        >
+          Request your free Blueprint
+        </Link>
       </div>
     </section>
   );
