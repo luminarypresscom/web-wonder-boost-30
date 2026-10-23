@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL } from "@/lib/site-data";
+import logo from "@/assets/luminary-logo-sharp.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -83,6 +84,7 @@ export function Footer() {
         <div>
           <p className="font-serif text-2xl text-foreground">Luminary Press</p>
           <p className="mt-2 text-sm text-muted-foreground">Hybrid publishing, book marketing & author promotion.</p>
+          <img src={logo.url} alt="Luminary Press logo" loading="lazy" width={210} height={171} className="mt-5 h-auto w-20 object-contain" />
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm">
           {nav.map((n) => (
