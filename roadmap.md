@@ -5,3 +5,7 @@
 - [x] Add manuscript review enquiries without unsupported promises
 - [x] Remove all visible em dashes
 - [x] Validate desktop, mobile, forms, links, metadata, and diagnostics
+
+- [ ] Expand Services to cover all pricing features and requested creative services
+- [ ] Remove testimonial names while preserving original quotes
+- [ ] Verify service coverage, navigation, and desktop/mobile layout
