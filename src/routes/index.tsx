@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import library from "@/assets/library.jpg";
 import promo from "@/assets/promo.jpg";
 import social from "@/assets/social.jpg";
+import logo from "@/assets/luminary-logo-sharp.png.asset.json";
 import { covers, testimonials, blueprintItems } from "@/lib/site-data";
 import { BlueprintBand } from "@/components/site/Layout";
 
@@ -26,6 +27,7 @@ function Home() {
         <img src={library} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
         <div className="relative mx-auto max-w-6xl px-5 py-20 md:py-32">
+          <img src={logo.url} alt="Luminary Press logo" width={210} height={171} className="mb-7 h-auto w-24 object-contain md:w-28" />
           <p className="eyebrow">Premium author promotion</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.02] text-foreground md:text-7xl">
             Your book deserves <em className="text-accent">to be seen.</em>
