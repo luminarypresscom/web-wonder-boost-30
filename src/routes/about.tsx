@@ -62,10 +62,6 @@ function About() {
           {testimonials.map((t) => (
             <figure key={t.name} className="rounded-xl border border-border bg-card p-6">
               <blockquote className="font-serif text-lg leading-relaxed text-foreground">"{t.quote}"</blockquote>
-              <figcaption className="mt-5 text-sm">
-                <span className="font-bold text-foreground">{t.name}</span>
-                <span className="block text-muted-foreground">{t.role}</span>
-              </figcaption>
             </figure>
           ))}
         </div>

@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep hybrid publishing enquiries in the existing enquiries flow, because one intake path keeps the author experience and operations coherent.
+- Keep the Services catalog in a shared browser-safe data module and reuse pricing feature wording from site-data, so the Services and Pricing pages remain consistent without duplicated package copy.
